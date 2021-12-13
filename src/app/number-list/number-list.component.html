@@ -1,11 +1,22 @@
-<div>
-  <button [disabled]="isCurrentlySorting" (click)="bubblesort()">
+<div fxLayout="row" fxLayoutAlign="end">
+  <button
+    fxFlex="none"
+    mat-button
+    [disabled]="isCurrentlySorting"
+    (click)="bubblesort()"
+  >
     Bubble Sort
   </button>
-  <button [disabled]="isCurrentlySorting" (click)="getRandomNumbers()">
+  <button
+    fxFlex="none"
+    mat-button
+    [disabled]="isCurrentlySorting"
+    (click)="getRandomNumbers()"
+  >
     Random
   </button>
 </div>
+
 <div class="list-container">
   <div class="number-list">
     <div class="number" *ngFor="let number of number$ | async">
