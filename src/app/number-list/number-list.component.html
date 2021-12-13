@@ -1,0 +1,9 @@
+<button (click)="bubblesort()">Bubble Sort</button>
+<button (click)="getRandomNumbers()">Random</button>
+<div class="list-container">
+  <div class="number-list">
+    <div class="number" *ngFor="let number of number$ | async">
+      {{ number }}
+    </div>
+  </div>
+</div>

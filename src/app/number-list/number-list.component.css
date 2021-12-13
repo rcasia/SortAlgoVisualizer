@@ -1,0 +1,20 @@
+.list-container {
+  background-color: rgb(222, 184, 135);
+  display: block;
+  padding: 20px;
+}
+
+.list-container .number-list {
+  display: flex;
+}
+
+.number-list .number {
+  position: relative;
+  border: white 1px solid;
+  background: rgb(165, 42, 42);
+  color: rgb(255, 220, 220);
+  padding: 20px;
+  margin: 0 5px;
+  width: 70px;
+  text-align: center;
+}
