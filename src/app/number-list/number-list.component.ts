@@ -9,6 +9,8 @@ import { NumberService } from '../services/number/number.service';
   styleUrls: ['./number-list.component.css'],
 })
 export class NumberListComponent implements OnInit, AfterViewInit {
+  isCurrentlySorting = false;
+
   numberList!: NumberList;
 
   number$!: Observable<number[]>;
@@ -27,7 +29,10 @@ export class NumberListComponent implements OnInit, AfterViewInit {
   }
 
   bubblesort() {
-    this.numberList.bubbleSort();
+    this.isCurrentlySorting = true;
+    this.numberList.bubbleSort().finally(() => {
+      this.isCurrentlySorting = false;
+    });
   }
 
   getRandomNumbers() {
